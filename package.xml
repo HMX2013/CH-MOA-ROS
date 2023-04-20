@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>convex_optimize_fitting</name>
+  <version>1.12.0</version>
+  <description>convex_optimize_fitting package</description>
+  <maintainer email="xxx@outlook.com">hmx</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>geometry_msgs</depend>
+  <depend>pcl_ros</depend>
+  <depend>roscpp</depend>
+  <depend>tf</depend>
+
+  <build_depend>obsdet_msgs</build_depend>
+  <exec_depend>obsdet_msgs</exec_depend>
+
+</package>

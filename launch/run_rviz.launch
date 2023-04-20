@@ -1,0 +1,13 @@
+<launch>
+  <node pkg="convex_optimize_fitting" type="convex_optimize_fitting" name="convex_optimize_fitting" output="screen" >
+    <param name="input_cluster_topic"           value="/kitti3d/cluster_array"/>
+    <param name="bbox_target_frame"             value="map"/>     
+  </node>
+
+  <node pkg="tf2_ros"  type="static_transform_publisher" name="velodyne_to_map" args="0 0 -1.57  0 0 0  /velodyne /map" /> -->
+  <node pkg="tf2_ros"  type="static_transform_publisher" name="map_to_base_link" args="0 0 0    1 1 1  /map /base_link" /> -->
+
+  <!-- Rviz -->
+  <node type="rviz" name="rviz" pkg="rviz" args="-d $(find convex_optimize_fitting)/rviz/convex_optimize_fitting.rviz" output="log" respawn="false" />
+
+</launch>
